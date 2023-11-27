@@ -1,6 +1,17 @@
 import { Link } from "react-router-dom";
-
+import {FaShoppingCart} from 'react-icons/fa'
+import useAuth from "../../../hooks/useAuth";
+import useCart from "../../../hooks/useCart";
 const Navbar = () => {
+  const { user, logOut } = useAuth();
+  const [cart] = useCart();
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
+
   const navOptions = (
     <>
       <li>
@@ -9,15 +20,38 @@ const Navbar = () => {
       <li>
         <Link to="/secret">Join as Employee</Link>
       </li>
-      <li>
-        <Link to="/menu">Asset List</Link>
-      </li>
+      
       <li>
         <Link to="/secret">Join as HR/Admin</Link>
       </li>
       <li>
-        <Link to="/secret">Login</Link>
+        <Link to="/menu">Asset List</Link>
       </li>
+      <li>
+        <Link to="/order/vehicle">Order List</Link>
+      </li>
+      <li>
+        <Link to="/">
+          <button className="btn">
+            <FaShoppingCart></FaShoppingCart>
+            <div className="badge badge-secondary">+0</div>
+          </button>
+        </Link>
+      </li>
+      {user ? (
+        <>
+          <span>{user?.displayName}</span>
+          <button onClick={handleLogOut} className="btn btn-ghost">
+            Log Out
+          </button>
+        </>
+      ) : (
+        <>
+          <li>
+            <Link to="/login">Login</Link>
+          </li>
+        </>
+      )}
     </>
   );
 
@@ -49,7 +83,8 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-xl">RUBICON</a>
+          <img className="w-44" src="https://i.ibb.co/Dzsx17g/logo-1.png" alt="" />
+          
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>

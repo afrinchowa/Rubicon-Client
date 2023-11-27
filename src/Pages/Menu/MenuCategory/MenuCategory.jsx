@@ -5,7 +5,7 @@ import Cover from "../../Shared/Cover/Cover";
 
 const MenuCategory = ({items,name, img}) => {
     return (
-        <div>
+        <div className="p-2">
         {name && <Cover img={img} name={name}></Cover>}
            <div className="grid md:grid-cols-2 gap-10 my-16">
       {

@@ -5,7 +5,7 @@
       "type": "Electronics",
       "status": "Active",
       "details": "Brand: TechMaster, RAM: 16GB, Storage: 512GB SSD",
-      "image": "laptop_image_url.jpg",
+      "image": "https://i.ibb.co/g7KwHjx/austin-distel-Dfj-JMVhw-H-8-unsplash.jpg",
       "whyNeeded": "Essential for daily office tasks.",
       "additionalInfo": "Assigned to employee ID: EMP001"
     },
@@ -15,7 +15,7 @@
       "type": "Furniture",
       "status": "In Use",
       "details": "Material: Leather, Color: Black",
-      "image": "chair_image_url.jpg",
+      "image": "https://i.ibb.co/JyQS9p4/domenico-loia-h-GV2-Tf-Oh0ns-unsplash.jpg",
       "whyNeeded": "Provides ergonomic seating for employees.",
       "additionalInfo": "Purchase date: 2021-05-15"
     },
@@ -25,7 +25,7 @@
       "type": "Electronics",
       "status": "Maintenance",
       "details": "Resolution: 1080p, Lumens: 5000",
-      "image": "projector_image_url.jpg",
+      "image": "https://i.ibb.co/2cYdz2m/austin-distel-EMPZ7y-RZo-Gw-unsplash.jpg",
       "whyNeeded": "Used for presentations in conference rooms.",
       "additionalInfo": "Last maintenance: 2023-02-28"
     },
@@ -35,7 +35,7 @@
       "type": "Vehicle",
       "status": "Available",
       "details": "Make: EcoDrive, Model: ECO-200, Year: 2022",
-      "image": "https://ibb.co/DkpPGFC",
+      "image": "https://i.ibb.co/d6gsbv2/obi-pixel8propix-6e4a-GH22-XFo-unsplash.jpg",
       "whyNeeded": "For business travel and transportation.",
       "additionalInfo": "Mileage: 15,000 km"
     },
@@ -45,7 +45,7 @@
       "type": "IT Equipment",
       "status": "Active",
       "details": "Capacity: 42U, Power Supply: Dual",
-      "image": "server_rack_image_url.jpg",
+      "image": "https://i.ibb.co/XC0YHRf/alexandru-bogdan-ghita-e-M6-WUs4n-KMY-unsplash.jpg",
       "whyNeeded": "Houses critical server infrastructure.",
       "additionalInfo": "Installed rack-mounted servers"
     },
@@ -55,7 +55,7 @@
       "type": "Furniture",
       "status": "In Use",
       "details": "Material: Oak, Seating Capacity: 10",
-      "image": "conference_table_image_url.jpg",
+      "image": "https://i.ibb.co/JyQS9p4/domenico-loia-h-GV2-Tf-Oh0ns-unsplash.jpg",
       "whyNeeded": "Used for meetings and collaborative work.",
       "additionalInfo": "Equipped with power outlets."
     },
@@ -65,7 +65,7 @@
       "type": "Electronics",
       "status": "Active",
       "details": "Brand: Communico, OS: Android, Storage: 128GB",
-      "image": "smartphone_image_url.jpg",
+      "image": "https://i.ibb.co/Pmn5RzG/scott-graham-5f-Nm-Wej4t-AA-unsplash.jpg",
       "whyNeeded": "Facilitates communication within the office.",
       "additionalInfo": "Extension line for office use."
     },
@@ -75,7 +75,7 @@
       "type": "Office Equipment",
       "status": "Out of Order",
       "details": "Type: Laser, Color: Monochrome",
-      "image": "printer_image_url.jpg",
+      "image": "https://i.ibb.co/p35hhJH/krakenimages-376-KN-ISpl-E-unsplash.jpg",
       "whyNeeded": "Prints important documents for the team.",
       "additionalInfo": "Under repair, estimated repair date: 2023-04-10"
     },
@@ -85,7 +85,7 @@
       "type": "Office Supplies",
       "status": "Active",
       "details": "Type: Magnetic, Size: 36x48 inches",
-      "image": "whiteboard_image_url.jpg",
+      "image": "https://i.ibb.co/pL6LwBL/piggybank-B0-Xp-Yhe-Gekk-unsplash.jpg",
       "whyNeeded": "Used for brainstorming and collaboration.",
       "additionalInfo": "Includes magnetic markers and eraser."
     },
@@ -95,7 +95,7 @@
       "type": "HVAC",
       "status": "Active",
       "details": "BTU: 18000, Cooling Area: 500 sq ft",
-      "image": "ac_unit_image_url.jpg",
+      "image": "https://i.ibb.co/0fsSFBM/piggybank-lq-PS3-Yyzg8-unsplash.jpg",
       "whyNeeded": "Maintains a comfortable working environment.",
       "additionalInfo": "Regular maintenance every six months."
     }
