@@ -14,7 +14,7 @@ const SignUp = () => {
     formState: { errors },
   } = useForm();
 
-  const { createUser, updateUserProfile } = useAuth;
+  const {  createUser, updateUserProfile } = useAuth();
   const navigate = useNavigate();
 
   const onSubmit = (data) => {

@@ -1,6 +1,6 @@
 [
     {
-      "_id": "1",
+      
       "name": "Laptop-A1",
       "type": "Electronics",
       "status": "Active",
@@ -10,7 +10,7 @@
       "additionalInfo": "Assigned to employee ID: EMP001"
     },
     {
-      "_id": "2",
+      
       "name": "Desk-Chair-23",
       "type": "Furniture",
       "status": "In Use",
@@ -20,7 +20,7 @@
       "additionalInfo": "Purchase date: 2021-05-15"
     },
     {
-      "_id": "3",
+      
       "name": "Projector-X550",
       "type": "Electronics",
       "status": "Maintenance",
@@ -30,7 +30,7 @@
       "additionalInfo": "Last maintenance: 2023-02-28"
     },
     {
-      "_id": "4",
+      
       "name": "Company-Vehicle-7",
       "type": "Vehicle",
       "status": "Available",
@@ -40,7 +40,7 @@
       "additionalInfo": "Mileage: 15,000 km"
     },
     {
-      "_id": "5",
+      
       "name": "Server-Rack-42U",
       "type": "IT Equipment",
       "status": "Active",
@@ -50,7 +50,7 @@
       "additionalInfo": "Installed rack-mounted servers"
     },
     {
-      "_id": "6",
+      
       "name": "Conference-Room-Table-1",
       "type": "Furniture",
       "status": "In Use",
@@ -60,7 +60,7 @@
       "additionalInfo": "Equipped with power outlets."
     },
     {
-      "_id": "7",
+      
       "name": "Smartphone-Office-Extension",
       "type": "Electronics",
       "status": "Active",
@@ -70,7 +70,7 @@
       "additionalInfo": "Extension line for office use."
     },
     {
-      "_id": "8",
+      
       "name": "Printer-XYZ-5000",
       "type": "Office Equipment",
       "status": "Out of Order",
@@ -80,7 +80,7 @@
       "additionalInfo": "Under repair, estimated repair date: 2023-04-10"
     },
     {
-      "_id": "9",
+      
       "name": "Whiteboard-Magnetic-36x48",
       "type": "Office Supplies",
       "status": "Active",
@@ -90,7 +90,7 @@
       "additionalInfo": "Includes magnetic markers and eraser."
     },
     {
-      "_id": "10",
+      
       "name": "Air-Conditioner-Unit-3",
       "type": "HVAC",
       "status": "Active",
