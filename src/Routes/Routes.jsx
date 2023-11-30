@@ -14,6 +14,10 @@ import AdminRoute from "./AdminRoute";
 import ManageItems from "../Pages/Dashboard/ManageItems/ManageItems";
 import UpdateItem from "../Pages/Dashboard/UpdateItem/UpdateItem";
 import Payment from "../Pages/Dashboard/Payment/Payment";
+import JoinAsAdmin from "../Pages/Join as Admin/JoinAsAdmin";
+import JoinAsEmployee from "../Pages/JoinAsEmployee/JoinAsEmployee";
+import UserHome from "../Pages/Dashboard/UserHome/UserHome";
+import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -43,6 +47,14 @@ export const router = createBrowserRouter([
         path: "signUp",
         element: <SignUp></SignUp>,
       },
+      {
+        path: "joinAsAdmin",
+        element: <JoinAsAdmin></JoinAsAdmin>,
+      },
+      {
+        path: "joinAsEmployee",
+        element: <JoinAsEmployee></JoinAsEmployee>,
+      },
     ],
   },
   {
@@ -53,9 +65,15 @@ export const router = createBrowserRouter([
       </PrivateRoutes>
     ),
     children: [
+      // normal user
+
       {
         path: "cart",
         element: <Cart></Cart>,
+      },
+      {
+        path: "userHome",
+        element: <UserHome></UserHome>,
       },
       {
         path: "payment",
@@ -67,6 +85,14 @@ export const router = createBrowserRouter([
         element: (
           <AdminRoute>
             <AllUsers></AllUsers>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "adminHome",
+        element: (
+          <AdminRoute>
+            <AdminHome></AdminHome>
           </AdminRoute>
         ),
       },

@@ -20,6 +20,13 @@ const Navbar = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
+      <li>
+        <Link to="joinAsEmployee">Join as Employee</Link>
+      </li>
+
+      <li>
+        <Link to="joinAsAdmin">Join as HR/Admin</Link>
+      </li>
       {isAdmin ? (
         <>
           <li>
@@ -29,7 +36,7 @@ const Navbar = () => {
             <Link to="/dashboard/addItems">Add an Employee</Link>
           </li>
           <li>
-            <Link to="cart"> Asset List</Link>
+            <Link to="/order/electronics"> Asset List</Link>
           </li>
           <li>
             <Link to="/dashboard/addItems"> Add an Asset</Link>
@@ -44,6 +51,23 @@ const Navbar = () => {
         </>
       ) : (
         <></>
+        // <>
+        //   <li>
+        //     <Link to="">My Team</Link>
+        //   </li>
+        //   <li>
+        //     <Link to="">My Assets</Link>
+        //   </li>
+        //   <li>
+        //     <Link to="">	Request for an Asset</Link>
+        //   </li>
+        //   <li>
+        //     <Link to="">	Make a Custom Request</Link>
+        //   </li>
+        //   <li>
+        //     <Link to="">	Profile</Link>
+        //   </li>
+        // </>
       )}
 
       {user ? (
@@ -59,22 +83,12 @@ const Navbar = () => {
                 <div className="badge badge-secondary">+{cart.length}</div>
               </button>
             </Link>
-            <li>
-              <Link to="/order/vehicle">Order List</Link>
-            </li>
           </li>
         </>
       ) : (
         <>
           <li>
             <Link to="/login">Login</Link>
-          </li>
-          <li>
-            <Link to="/secret">Join as Employee</Link>
-          </li>
-
-          <li>
-            <Link to="/secret">Join as HR/Admin</Link>
           </li>
         </>
       )}
