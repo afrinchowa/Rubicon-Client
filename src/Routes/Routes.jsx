@@ -84,7 +84,7 @@ export const router = createBrowserRouter([
           <AdminRoute>
             <UpdateItem></UpdateItem>
           </AdminRoute>,
-          loader : ({params}) => fetch(`http://localhost:5000/menu/${params.id}`)
+          loader : ({params}) => fetch(`https://rubicon-server.vercel.app/menu/${params.id}`)
         
       },
       {

@@ -1,8 +1,9 @@
 import { Link } from "react-router-dom";
-import {FaShoppingCart} from 'react-icons/fa'
+import { FaShoppingCart } from "react-icons/fa";
 import useAuth from "../../../hooks/useAuth";
 import useCart from "../../../hooks/useCart";
-import useAdmin from "../Hooks/useAdmin";
+import useAdmin from "../../../Hooks/useAdmin";
+
 const Navbar = () => {
   const { user, logOut } = useAuth();
   const [cart] = useCart();
@@ -19,38 +20,61 @@ const Navbar = () => {
       <li>
         <Link to="/">Home</Link>
       </li>
-      <li>
-        <Link to="/secret">Join as Employee</Link>
-      </li>
-      
-      <li>
-        <Link to="/secret">Join as HR/Admin</Link>
-      </li>
-      <li>
-        <Link to="/menu">Asset List</Link>
-      </li>
-      <li>
-        <Link to="/order/vehicle">Order List</Link>
-      </li>
-      <li>
-        <Link to="/dashboard/cart">
-          <button className="btn">
-            <FaShoppingCart></FaShoppingCart>
-            <div className="badge badge-secondary">+{cart.length}</div>
-          </button>
-        </Link>
-      </li>
+      {isAdmin ? (
+        <>
+          <li>
+            <Link to="/dashboard/users">My Employee List</Link>
+          </li>
+          <li>
+            <Link to="/dashboard/addItems">Add an Employee</Link>
+          </li>
+          <li>
+            <Link to="cart"> Asset List</Link>
+          </li>
+          <li>
+            <Link to="/dashboard/addItems"> Add an Asset</Link>
+          </li>
+          <li>
+            <Link to="/dashboard/manageBookings">All Requests</Link>
+          </li>
+
+          <li>
+            <Link to="/dashboard/manageBookings">Custom Requests List</Link>
+          </li>
+        </>
+      ) : (
+        <></>
+      )}
+
       {user ? (
         <>
           <span>{user?.displayName}</span>
           <button onClick={handleLogOut} className="btn btn-ghost">
             Log Out
           </button>
+          <li>
+            <Link to="/dashboard/cart">
+              <button className="btn">
+                <FaShoppingCart></FaShoppingCart>
+                <div className="badge badge-secondary">+{cart.length}</div>
+              </button>
+            </Link>
+            <li>
+              <Link to="/order/vehicle">Order List</Link>
+            </li>
+          </li>
         </>
       ) : (
         <>
           <li>
             <Link to="/login">Login</Link>
+          </li>
+          <li>
+            <Link to="/secret">Join as Employee</Link>
+          </li>
+
+          <li>
+            <Link to="/secret">Join as HR/Admin</Link>
           </li>
         </>
       )}
@@ -85,14 +109,14 @@ const Navbar = () => {
               {navOptions}
             </ul>
           </div>
-          <img className="w-44" src="https://i.ibb.co/Dzsx17g/logo-1.png" alt="" />
-          
+          <img
+            className="w-44"
+            src="https://i.ibb.co/Dzsx17g/logo-1.png"
+            alt=""
+          />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navOptions}</ul>
-        </div>
-        <div className="navbar-end">
-          <a className="btn">Button</a>
         </div>
       </div>
     </>
