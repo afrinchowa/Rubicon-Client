@@ -17,58 +17,79 @@ const Navbar = () => {
 
   const navOptions = (
     <>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="joinAsEmployee">Join as Employee</Link>
-      </li>
-
-      <li>
-        <Link to="joinAsAdmin">Join as HR/Admin</Link>
-      </li>
-      {isAdmin ? (
-        <>
-          <li>
-            <Link to="/dashboard/users">My Employee List</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/addItems">Add an Employee</Link>
-          </li>
-          <li>
-            <Link to="/order/electronics"> Asset List</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/addItems"> Add an Asset</Link>
-          </li>
-          <li>
-            <Link to="/dashboard/manageBookings">All Requests</Link>
-          </li>
-
-          <li>
-            <Link to="/dashboard/manageBookings">Custom Requests List</Link>
-          </li>
-        </>
-      ) : (
-        <></>
-        // <>
-        //   <li>
-        //     <Link to="">My Team</Link>
-        //   </li>
-        //   <li>
-        //     <Link to="">My Assets</Link>
-        //   </li>
-        //   <li>
-        //     <Link to="">	Request for an Asset</Link>
-        //   </li>
-        //   <li>
-        //     <Link to="">	Make a Custom Request</Link>
-        //   </li>
-        //   <li>
-        //     <Link to="">	Profile</Link>
-        //   </li>
-        // </>
+     
+      {user && isAdmin && (
+        <li>
+          <Link to="/dashboard/adminHome">Admin Home</Link>
+        </li>
       )}
+      {user && !isAdmin && (
+        <li>
+          <Link to="/dashboard/userHome">User Home</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+        <li>
+          <Link to="/dashboard/users">My Employee List</Link>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to="/dashboard/users">My Team</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+        <li>
+          <Link to="/dashboard/addItems">Add an Employee</Link>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to="cart">My Assets</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+        <li>
+          <Link to="/order/electronics"> Asset List</Link>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to=""> Request for an Asset</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+        <li>
+          <Link to="/dashboard/addItems"> Add an Asset</Link>
+        </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to=""> Make a Custom Request</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+         <li>
+         <Link to="/dashboard/manageBookings">All Requests</Link>
+       </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to=""> Profile</Link>
+        </li>
+      )}
+      {user && isAdmin && (
+     <li>
+     <Link to="/dashboard/manageBookings">Custom Requests List</Link>
+   </li>
+      )}
+      {user && !isAdmin && (
+        <li>
+          <Link to=""> .</Link>
+        </li>
+      )}
+
+     
 
       {user ? (
         <>
@@ -90,11 +111,20 @@ const Navbar = () => {
           <li>
             <Link to="/login">Login</Link>
           </li>
+          <li>
+        <Link to="/">Home</Link>
+      </li>
+      <li>
+        <Link to="joinAsEmployee">Join as Employee</Link>
+      </li>
+
+      <li>
+        <Link to="joinAsAdmin">Join as HR/Admin</Link>
+      </li>
         </>
       )}
     </>
   );
-
   return (
     <>
       <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
