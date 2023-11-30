@@ -23,14 +23,20 @@ const Dashboard = () => {
   // TODO: get isAdmin value from the database
 
   const [isAdmin] = useAdmin();
-
+console.log(isAdmin);
   return (
     <div className="flex">
       {/*  dashboard sidebar*/}
-      <div className="w-64 min-h-screen bg-orange-400">
+      <div className="w-64 min-h-screen bg-blue-500">
         <ul className="menu">
           {isAdmin ? (
             <>
+            <li>
+                <NavLink to="/dashboard/cart">
+                  <FaShoppingCart></FaShoppingCart>
+                  My Cart({cart.length})
+                </NavLink>
+              </li>
               <li>
                 <NavLink to="/dashboard/adminHome">
                   <FaHome></FaHome>
