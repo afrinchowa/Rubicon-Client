@@ -30,14 +30,14 @@ const Order = () => {
       <Helmet>
         <title>Rubicon| order Asset </title>
       </Helmet>
-      <Cover img={orderCoverImg} title={"Order Food"}></Cover>
+      <Cover img={orderCoverImg} title={"Order Asset"}></Cover>
       <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>
-          <Tab>vehicle</Tab>
-          <Tab>electronics</Tab>
+          <Tab>Vehicle</Tab>
+          <Tab>Electronics</Tab>
           <Tab>Office Equipment</Tab>
           <Tab>It Equipment</Tab>
-          <Tab>furniture</Tab>
+          <Tab>Furniture</Tab>
         </TabList>
         <TabPanel>
           <OrderTab items={vehicle}></OrderTab>

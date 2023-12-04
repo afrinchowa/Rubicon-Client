@@ -34,7 +34,7 @@ console.log(isAdmin);
             <li>
                 <NavLink to="/dashboard/cart">
                   <FaShoppingCart></FaShoppingCart>
-                  My Cart({cart.length})
+                  My Asset({cart.length})
                 </NavLink>
               </li>
               <li>
@@ -56,7 +56,7 @@ console.log(isAdmin);
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard/assetList">
+                <NavLink to="/order/vehicle">
                   <FaUtensils></FaUtensils>
                   Asset List
                 </NavLink>

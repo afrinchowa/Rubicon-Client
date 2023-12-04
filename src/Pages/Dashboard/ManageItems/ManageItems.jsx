@@ -35,7 +35,7 @@ const ManageItems = () => {
   };
   return (
     <div>
-      <SectionTitle heading="Manage All Assets"></SectionTitle>
+      <SectionTitle heading="Custom Request"></SectionTitle>
       <div>
         <div className="overflow-x-auto">
           <table className="table w-full">

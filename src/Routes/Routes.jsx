@@ -18,6 +18,10 @@ import JoinAsAdmin from "../Pages/Join as Admin/JoinAsAdmin";
 import JoinAsEmployee from "../Pages/JoinAsEmployee/JoinAsEmployee";
 import UserHome from "../Pages/Dashboard/UserHome/UserHome";
 import AdminHome from "../Pages/Dashboard/AdminHome/AdminHome";
+import AddEmployee from "../Pages/Dashboard/AddEmployee/AddEmployee";
+import AllRequest from "../Pages/AllRequest/AllRequest";
+import CustomRequest from "../Pages/CustomRequest/CustomRequest";
+import MyTeam from "../Pages/Dashboard/MyTeam/MyTeam";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -72,6 +76,10 @@ export const router = createBrowserRouter([
         element: <Cart></Cart>,
       },
       {
+        path: "myTeam",
+        element: <MyTeam></MyTeam>,
+      },
+      {
         path: "userHome",
         element: <UserHome></UserHome>,
       },
@@ -99,8 +107,32 @@ export const router = createBrowserRouter([
       {
         path: "addItems",
         element: (
-          <AdminRoute>
+       
             <AddItems></AddItems>
+         
+        ),
+      },
+      {
+        path: "addEmployee",
+        element: (
+          <AdminRoute>
+            <AddEmployee></AddEmployee>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "customRequest",
+        element: (
+          <AdminRoute>
+            <CustomRequest></CustomRequest>
+          </AdminRoute>
+        ),
+      },
+      {
+        path: "allRequest",
+        element: (
+          <AdminRoute>
+            <AllRequest></AllRequest>
           </AdminRoute>
         ),
       },

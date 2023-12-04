@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import { FaShoppingCart } from "react-icons/fa";
 import useAuth from "../../../hooks/useAuth";
 import useCart from "../../../hooks/useCart";
 import useAdmin from "../../../Hooks/useAdmin";
@@ -35,27 +34,32 @@ const Navbar = () => {
       )}
       {user && !isAdmin && (
         <li>
-          <Link to="/dashboard/users">My Team</Link>
+          <Link to="/dashboard/myTeam">My Team</Link>
         </li>
       )}
       {user && isAdmin && (
         <li>
-          <Link to="/dashboard/addItems">Add an Employee</Link>
+          <Link to="/dashboard/addEmployee">Add an Employee</Link>
         </li>
       )}
       {user && !isAdmin && (
-        <li>
-          <Link to="cart">My Assets</Link>
+          <li>
+          <Link to="/dashboard/cart">
+            <button className="btn">
+             My Asset
+              <div className="badge badge-secondary">+{cart.length}</div>
+            </button>
+          </Link>
         </li>
       )}
       {user && isAdmin && (
         <li>
-          <Link to="/order/electronics"> Asset List</Link>
+          <Link to="/order/vehicle"> Asset List</Link>
         </li>
       )}
       {user && !isAdmin && (
         <li>
-          <Link to=""> Request for an Asset</Link>
+          <Link to="/order/vehicle"> Request for an Asset</Link>
         </li>
       )}
       {user && isAdmin && (
@@ -65,12 +69,12 @@ const Navbar = () => {
       )}
       {user && !isAdmin && (
         <li>
-          <Link to=""> Make a Custom Request</Link>
+          <Link to="/dashboard/addItems"> Make a Custom Request</Link>
         </li>
       )}
       {user && isAdmin && (
          <li>
-         <Link to="/dashboard/manageBookings">All Requests</Link>
+         <Link to="/dashboard/allRequest">All Requests</Link>
        </li>
       )}
       {user && !isAdmin && (
@@ -80,7 +84,7 @@ const Navbar = () => {
       )}
       {user && isAdmin && (
      <li>
-     <Link to="/dashboard/manageBookings">Custom Requests List</Link>
+     <Link to="/dashboard/manageItems">Custom Requests List</Link>
    </li>
       )}
       {user && !isAdmin && (
@@ -97,14 +101,7 @@ const Navbar = () => {
           <button onClick={handleLogOut} className="btn btn-ghost">
             Log Out
           </button>
-          <li>
-            <Link to="/dashboard/cart">
-              <button className="btn">
-                <FaShoppingCart></FaShoppingCart>
-                <div className="badge badge-secondary">+{cart.length}</div>
-              </button>
-            </Link>
-          </li>
+       
         </>
       ) : (
         <>
@@ -127,7 +124,7 @@ const Navbar = () => {
   );
   return (
     <>
-      <div className="navbar fixed z-10 bg-opacity-30 bg-black text-white max-w-screen-xl mx-auto">
+      <div className="navbar fixed z-10 bg-opacity-30 bg-black text-blue-900 lg:text-white max-w-screen-xl mx-auto">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
